@@ -1,0 +1,28 @@
+{
+  "template": "https://github.com/FAIRmat-NFDI/cookiecutter-nomad-plugin",
+  "commit": "595147628d3ccc35a24b329484114e830b194558",
+  "checkout": null,
+  "context": {
+    "cookiecutter": {
+      "full_name": "Ross Knapman",
+      "email": "ross.knapman@uni-due.de",
+      "github_username": "rossknapman",
+      "plugin_name": "Hysteresis",
+      "module_name": "hysteresis",
+      "short_description": "Hysteresis plugin to test NOMAD plugins.",
+      "version": "0.1.0",
+      "license": "MIT",
+      "include_schema_package": false,
+      "include_normalizer": true,
+      "include_parser": true,
+      "include_app": false,
+      "include_example_uploads": false,
+      "_copy_without_render": [
+        "*.html"
+      ],
+      "_template": "https://github.com/FAIRmat-NFDI/cookiecutter-nomad-plugin",
+      "_commit": "595147628d3ccc35a24b329484114e830b194558"
+    }
+  },
+  "directory": null
+}
