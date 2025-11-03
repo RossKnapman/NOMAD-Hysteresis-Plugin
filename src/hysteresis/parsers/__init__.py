@@ -2,17 +2,17 @@ from nomad.config.models.plugins import ParserEntryPoint
 from pydantic import Field
 
 
-class NewParserEntryPoint(ParserEntryPoint):
+class HysteresisParserEntryPoint(ParserEntryPoint):
     parameter: int = Field(0, description='Custom configuration parameter')
 
     def load(self):
-        from hysteresis.parsers.parser import NewParser
+        from hysteresis.parsers.parser import HysteresisParser
 
-        return NewParser(**self.model_dump())
+        return HysteresisParser(**self.model_dump())
 
 
-parser_entry_point = NewParserEntryPoint(
-    name='NewParser',
-    description='New parser entry point configuration.',
-    mainfile_name_re=r'.*\.newmainfilename',
+parser_entry_point = HysteresisParserEntryPoint(
+    name='HysteresisParser',
+    description='New hysteresis parser.',
+    mainfile_name_re=r'.*\.mh',
 )

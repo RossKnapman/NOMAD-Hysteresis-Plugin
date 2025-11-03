@@ -19,7 +19,7 @@ configuration = config.get_plugin_entry_point(
 )
 
 
-class NewParser(MatchingParser):
+class HysteresisParser(MatchingParser):
     def parse(
         self,
         mainfile: str,
@@ -27,6 +27,6 @@ class NewParser(MatchingParser):
         logger: 'BoundLogger',
         child_archives: dict[str, 'EntryArchive'] = None,
     ) -> None:
-        logger.info('NewParser.parse', parameter=configuration.parameter)
+        logger.info('Hysteresis parser called', parameter=configuration.parameter)
 
         archive.workflow2 = Workflow(name='test')
